@@ -1,0 +1,11 @@
+---
+layout: "default-layout.njk"
+title: Projekte
+---
+
+<ul>
+{% for project in projects%}
+    <li><a href={{project.url}} data-hover data-target={{project.data}}>{{project.title}}</a></li>
+{% endfor %}
+
+</ul>

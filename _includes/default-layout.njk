@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    {#
+    
     <link rel="stylesheet" href="/assets/style.css" />
-    #}
+   
 
-    <!-- capture the CSS content as a Nunjucks variable -->
+    {# <!-- capture the CSS content as a Nunjucks variable -->
     {% set css %} {% include "assets/style.css" %} {% endset %}
     <!-- feed it through our cssmin filter to minify -->
     <style>
-      {{ css | cssmin | safe }}
-    </style>
+      {{ css | cssmin | safe }} #}
+    {# </style> #}
+    {# document.querySelector(".test").addEventListener("mouseover", querySelectorAll(".image-musikversicherung").style.display = 'block';); #}
+    
+
   </head>
   <body>
-    <div >
+    <div class="left">
       <header>
-        <h1>Jannis Wicke</h1>
-        <a href="mailto:jannis@pixel-pink.de">Kontakt aufnehmen</a>
+        <h1><a href="/">Jannis Wicke</a></h1>
+        <a href="mailto:jannis@pixel-pink.de">E-Mail</a>
       </header>
+      <div class="flex-filler"></div>
       <section>
         <div class="content">
           <h2>
@@ -30,7 +34,34 @@
           {{ content | safe }}
         </div>
       </section>
-      <footer><a href="/impressum/">Impressum</a> <span>2020</span></footer>
+      <footer><a href="/impressum/" >Impressum</a> <span>2020</span></footer>
     </div>
+    <div class="stage " >
+    {% for project in projects%}
+      <img src={{project.image}} alt={{project.alt}} data-hover data-{{project.data}}></a>
+    {% endfor %}
+
+    </div>
+      {# hoverLink.addEventListener("mouseleave", () => {
+        image.classList.remove("show");
+      }); #}
+    <script>
+      let hoverLink = document.querySelectorAll("[data-hover]");
+      let hoverActive;
+      let image;
+
+      hoverLink.forEach(item => item.addEventListener("mouseenter", () =>{
+        hoverActive = `[data-${item.getAttribute("data-target")}]`;
+        image = document.querySelector(hoverActive);
+        image.classList.add("show");
+      }));
+       hoverLink.forEach(item => item.addEventListener("mouseleave", () =>{
+        hoverActive = `[data-${item.getAttribute("data-target")}]`;
+        image = document.querySelector(hoverActive);
+        image.classList.remove("show");
+      }));
+    
+</script>
   </body>
+
 </html>
