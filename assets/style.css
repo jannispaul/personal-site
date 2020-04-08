@@ -143,9 +143,9 @@ a:hover {
 
 .stage {
   width: 50%;
-  background: #fff;
+  /* background: #fff; */
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
 }
 img {
@@ -158,4 +158,13 @@ img {
 }
 .flex-filler {
   flex-grow: 2;
+}
+
+iframe {
+  min-width: 200% !important;
+  height: 200%;
+  border: none;
+  display: none;
+  transform: scale(0.5);
+  transform-origin: 0% 0%;
 }

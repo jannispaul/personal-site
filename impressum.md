@@ -7,4 +7,4 @@ Verantwortlicher
 
 Jannis Wicke
 
-[mailto:jannis@pixel-pink.de](jannis@pixel-pink.de)
+[jannis@pixel-pink.de](mailto:jannis@pixel-pink.de)

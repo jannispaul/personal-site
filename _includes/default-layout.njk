@@ -36,11 +36,10 @@
       </section>
       <footer><a href="/impressum/" >Impressum</a> <span>2020</span></footer>
     </div>
-    <div class="stage " >
+    <div class="stage" >
     {% for project in projects%}
-      <img src={{project.image}} alt={{project.alt}} data-hover data-{{project.data}}></a>
+      <iframe src={{project.url}} data-hover data-{{project.data}}></iframe>
     {% endfor %}
-
     </div>
       {# hoverLink.addEventListener("mouseleave", () => {
         image.classList.remove("show");
@@ -48,17 +47,17 @@
     <script>
       let hoverLink = document.querySelectorAll("[data-hover]");
       let hoverActive;
-      let image;
+      let iframe;
 
       hoverLink.forEach(item => item.addEventListener("mouseenter", () =>{
         hoverActive = `[data-${item.getAttribute("data-target")}]`;
-        image = document.querySelector(hoverActive);
-        image.classList.add("show");
+        iframe = document.querySelector(hoverActive);
+        iframe.classList.add("show");
       }));
        hoverLink.forEach(item => item.addEventListener("mouseleave", () =>{
         hoverActive = `[data-${item.getAttribute("data-target")}]`;
-        image = document.querySelector(hoverActive);
-        image.classList.remove("show");
+        iframe = document.querySelector(hoverActive);
+        iframe.classList.remove("show");
       }));
     
 </script>
