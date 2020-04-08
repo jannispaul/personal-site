@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    {#
+    <link rel="stylesheet" href="/assets/style.css" />
+    #}
+
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %} {% include "assets/style.css" %} {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+  </head>
+  <body>
+    <div >
+      <header>
+        <h1>Jannis Wicke</h1>
+        <a href="mailto:jannis@pixel-pink.de">Kontakt aufnehmen</a>
+      </header>
+      <section>
+        <div class="content">
+          <h2>
+            {{ title }}
+          </h2>
+          {{ content | safe }}
+        </div>
+      </section>
+      <footer><a href="/impressum/">Impressum</a> <span>2020</span></footer>
+    </div>
+  </body>
+</html>

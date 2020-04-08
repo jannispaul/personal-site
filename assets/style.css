@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* max-width: 100%;
+  min-height: 100%; */
+  padding: 3vw;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+li,
+span {
+  color: #111;
+  font-size: 6vw;
+  font-weight: 500;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+footer {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  padding-bottom: 2vw;
+  border-bottom: 2px solid #111;
+  margin-bottom: 2vw;
+}
+footer {
+  padding-top: 2vw;
+  border-top: 2px solid #111;
+}
+/* End of base styles */
+
+/* Index styles */
+li {
+  border-top: 2px solid #111;
+  /* padding: 2vw 0; */
+}
+li > a {
+  display: flex;
+  align-items: center;
+  height: 10vw;
+}
+h2 {
+  margin-bottom: 2vw;
+}
+
+a:hover {
+  -webkit-animation: color-change 5s infinite;
+  -moz-animation: color-change 5s infinite;
+  -o-animation: color-change 5s infinite;
+  -ms-animation: color-change 5s infinite;
+  animation: color-change 10s infinite;
+}
+
+/* @-webkit-keyframes color-change {
+  0% {
+    color: #f78703;
+  }
+  50% {
+    color: greenyellow;
+  }
+  100% {
+    color: #b1ff00;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+} */
+@keyframes color-change {
+  0% {
+    color: #f9008b;
+  }
+  50% {
+    color: blueviolet;
+  }
+  100% {
+    color: #f9008b;
+  }
+}
+
+.left {
+  max-width: 50%;
+}
