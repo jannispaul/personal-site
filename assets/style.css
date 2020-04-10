@@ -17,6 +17,7 @@ body {
   /* flex-direction: column; */
   /* justify-content: space-between; */
   align-items: stretch;
+  font-family: "Jura", sans-serif;
 }
 ul {
   list-style: none;
@@ -33,6 +34,7 @@ span {
   font-size: 2vw;
   font-weight: 500;
   line-height: 1;
+  font-family: "Jura", sans-serif;
 }
 
 a {
