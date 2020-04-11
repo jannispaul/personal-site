@@ -1,7 +1,8 @@
 ---
 layout: default-layout.njk
-title: Impressum
 ---
+
+# Impressum
 
 Verantwortlicher
 

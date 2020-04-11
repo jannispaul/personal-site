@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
 
-    
-    <link rel="stylesheet" href="/assets/style.css" />
-   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&text=*-_20ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%20&family=Orbitron:wght@900&text=JWaniscke%20&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&text=*-_20ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%20&family=Orbitron:wght@900&text=JWaniscke%20&display=swap" rel="stylesheet">
 
     {# <!-- capture the CSS content as a Nunjucks variable -->
     {% set css %} {% include "assets/style.css" %} {% endset %}
@@ -16,51 +15,44 @@
       {{ css | cssmin | safe }} #}
     {# </style> #}
     {# document.querySelector(".test").addEventListener("mouseover", querySelectorAll(".image-musikversicherung").style.display = 'block';); #}
-    
 
   </head>
   <body>
-    <div class="left">
-      <header>
-        <h1><a href="/">*_*</a></h1>
-        <a href="mailto:jannis@pixel-pink.de">E-Mail</a>
-      </header>
-      <div class="flex-filler"></div>
-      <section>
-        <div class="content">
-          <h2>
-            {{ title }}
-          </h2>
-          {{ content | safe }}
-        </div>
-      </section>
-      <footer><a href="/impressum/" >Impressum</a> <span>2020</span></footer>
-    </div>
-    <div class="stage" >
-    {% for project in projects%}
-      <iframe src={{project.url}} data-hover data-{{project.data}}></iframe>
-    {% endfor %}
-    </div>
-      {# hoverLink.addEventListener("mouseleave", () => {
+    <header>
+      <a href="/">*_*</a>
+      <a href="mailto:jannis@pixel-pink.de">E-Mail</a>
+    </header>
+
+    <section class="content">
+      {{ content | safe }}
+    </section>
+
+    <footer>
+      <a href="/impressum/" >Impressum</a>
+      <span>2020</span></footer>
+    {# hoverLink.addEventListener("mouseleave", () => {
         image.classList.remove("show");
       }); #}
-    <script>
-      let hoverLink = document.querySelectorAll("[data-hover]");
-      let hoverActive;
-      let iframe;
+    {# var iframes = document.querySelectorAll('iframe');
+      let selected;
+      let iframe; #}
 
-      hoverLink.forEach(item => item.addEventListener("mouseenter", () =>{
-        hoverActive = `[data-${item.getAttribute("data-target")}]`;
-        iframe = document.querySelector(hoverActive);
-        iframe.classList.add("show");
+    {# console.log(allElements); #}
+    {# console.log(selectedAttribute);
+        console.log(document.querySelectorAll(selectedAttribute)); #}
+    {# relatives.forEach(item => item.classList.toggle("hidden")) #}
+    {# let relatives = document.querySelectorAll(selectedAttribute); #}
+    <script>
+      let projects = document.querySelectorAll('.project');
+      let allElements = document.querySelectorAll('[data-project]');
+      projects.forEach(project => project.addEventListener('click', () => {
+        let selectedAttribute = `data-${project.getAttribute("data-target")}`;
+        allElements.forEach(
+          item => (item.hasAttribute(selectedAttribute))
+          ? (item.classList.toggle("hidden"))
+          : (item.classList.add("hidden")));
       }));
-       hoverLink.forEach(item => item.addEventListener("mouseleave", () =>{
-        hoverActive = `[data-${item.getAttribute("data-target")}]`;
-        iframe = document.querySelector(hoverActive);
-        iframe.classList.remove("show");
-      }));
-    
-</script>
+    </script>
   </body>
 
 </html>
