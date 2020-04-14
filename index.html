@@ -26,7 +26,7 @@
       <div class="grid">
     <div class="introduction">
         <h1 class="title">Jannis Wicke</h1>
-        <p>Hi! Ich bin Jannis. Designer,  Entwickler und Mitgründer von <a href="https//:pixel-pink.de">PixelPink</a>. Wenn Du eine Frage hast oder mit mir arbeiten willst schreib mir einfach eine <a href="mailto:jannis@pixel-pink.de">E-Mail</a>.
+        <p>Hi! Ich bin Jannis. Designer,  Entwickler und Mitgründer von <a href="https://pixel-pink.de">PixelPink</a>. Wenn Du eine Frage hast oder mit mir arbeiten willst schreib mir einfach eine <a href="mailto:jannis@pixel-pink.de">E-Mail</a>.
         </p>
     </div>
     <h2 class="section-headline">Projekte</h2>
@@ -60,8 +60,12 @@
     </footer>
     <script>
       let links = document.querySelectorAll("a");
-      links.forEach(link => link.addEventListener('mouseenter', changeMouth("o")));
-      links.forEach(link => link.addEventListener('mouseout', changeMouth("-")));
+      links.forEach(link => link.addEventListener('mouseenter', () => {
+        changeMouth("o")
+      }, false));
+      links.forEach(link => link.addEventListener('mouseout', () => {
+        changeMouth("-")
+      }, false));
       function changeMouth(symbol) {
         let mouth = document.querySelector(".mouth");
         mouth.innerHTML = symbol;
