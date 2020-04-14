@@ -34,8 +34,12 @@
     </footer>
     <script>
       let links = document.querySelectorAll("a");
-      links.forEach(link => link.addEventListener('mouseenter', changeMouth("o")));
-      links.forEach(link => link.addEventListener('mouseout', changeMouth("-")));
+      links.forEach(link => link.addEventListener('mouseenter', () => {
+        changeMouth("o")
+      }, false));
+      links.forEach(link => link.addEventListener('mouseout', () => {
+        changeMouth("-")
+      }, false));
       function changeMouth(symbol) {
         let mouth = document.querySelector(".mouth");
         mouth.innerHTML = symbol;
