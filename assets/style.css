@@ -62,6 +62,11 @@ header {
   border-bottom: 0.4vw solid #111;
   margin: 3vw 0 2vw;
 }
+.mouth {
+  display: inline-block;
+  width: 3vw;
+  text-align: center;
+}
 footer {
   padding-top: 2vw;
   border-top: 0.4vw solid #111;
@@ -82,7 +87,8 @@ a:hover {
   color: #ff5c00;
 }
 .project a:hover span {
-  display: inline-block;
+  /* display: inline-block; */
+  opacity: 1;
 }
 
 .project a {
@@ -120,7 +126,8 @@ section.content {
   text-decoration: underline;
 }
 .hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
 }
 .section-headline {
   grid-column: 1/2;
@@ -143,6 +150,10 @@ section.content {
     padding-bottom: 1vw;
     margin: 1.5vw 0 1vw;
     border-bottom: 0.15vw solid #111;
+  }
+  .mouth {
+    display: inline-block;
+    width: 1vw;
   }
   footer {
     padding-top: 1vw;

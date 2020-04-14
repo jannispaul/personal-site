@@ -5,47 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
 
-    <link rel="stylesheet" href="/assets/style.css"/>
+    {# <link rel="stylesheet" href="/assets/style.css"/> #}
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&text=§*-_1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZaäbcdefghijklmnoöpqrstuüvwxyz%20&family=Orbitron:wght@900&text=JWaniscke%20&display=swap" rel="stylesheet">
 
-    {# <!-- capture the CSS content as a Nunjucks variable -->
-    {% set css %} {% include "assets/style.css" %} {% endset %}
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+    {% include "assets/style.css" %}
+    {% endset %}
     <!-- feed it through our cssmin filter to minify -->
     <style>
-      {{ css | cssmin | safe }} #}
-    {# </style> #}
-    {# document.querySelector(".test").addEventListener("mouseover", querySelectorAll(".image-musikversicherung").style.display = 'block';); #}
+      {{css | cssmin | safe}}
+    </style>
 
   </head>
   <body>
     <header>
-      <a href="/">*_*</a>
+      <a href="/">*<span class="mouth">_</span>*</a>
       <a href="mailto:jannis@pixel-pink.de">E-Mail</a>
     </header>
 
     <section class={{class}}>
-      {# <pre> #}
-
       {{ content | safe }}
-
-      {# </pre> #}
-
     </section>
 
     <footer>
       <a href="/impressum/" >Impressum</a>
-      <span>2020</span></footer>
-    {# <script>
-      let projects = document.querySelectorAll('.project');
-      let allElements = document.querySelectorAll('[data-project]');
-      projects.forEach(project => project.addEventListener('click', () => {
-        let selectedAttribute = `data-${project.getAttribute("data-target")}`;
-        allElements.forEach(
-          item => (item.hasAttribute(selectedAttribute))
-          ? (item.classList.toggle("hidden"))
-          : (item.classList.add("hidden")));
-      }));
-    </script> #}
+      <span>2020</span>
+    </footer>
+    <script>
+      let links = document.querySelectorAll("a");
+      links.forEach(link => link.addEventListener('mouseenter', changeMouth("o")));
+      links.forEach(link => link.addEventListener('mouseout', changeMouth("-")));
+      function changeMouth(symbol) {
+        let mouth = document.querySelector(".mouth");
+        mouth.innerHTML = symbol;
+      }
+    </script>
   </body>
 
 </html>

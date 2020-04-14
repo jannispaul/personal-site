@@ -8,18 +8,12 @@ class: "content"
         <p>Hi! Ich bin Jannis. Designer,  Entwickler und Mitgründer von <a href="https//:pixel-pink.de">PixelPink</a>. Wenn Du eine Frage hast oder mit mir arbeiten willst schreib mir einfach eine <a href="mailto:jannis@pixel-pink.de">E-Mail</a>.
         </p>
     </div>
-    {# <div class="stage" >
-{% for project in projects%}
-    <iframe src={{project.url}} data-project data-{{project.data}} class="hidden"></iframe>
-{% endfor %}
-</div> #}
-
     <h2 class="section-headline">Projekte</h2>
     <ul class="projects">
         {%- for project in projects-%}
             <li class="project">
                 <a href={{project.url}}>
-                    <span class="project-title">{{project.title}}</span>
+                    {{project.title}}
                     <span class="hidden">öffnen</a>
                 </a>
             </li>
