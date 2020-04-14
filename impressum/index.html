@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&text=§*-_1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZaäbcdefghijklmnoöpqrstuüvwxyz%20&family=Orbitron:wght@900&text=JWaniscke%20&display=swap" rel="stylesheet">
+
+    <!-- capture the CSS content as a Nunjucks variable -->
+    
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      *{margin:0;padding:0;box-sizing:border-box}body,html{width:100%;height:100%}body{min-height:100vh;padding:0 5vw;background:#f7f4f2;display:flex;flex-flow:column;font-family:Jura,sans-serif}ul{list-style:none}a,h1,h2,h3,li,p,span{color:#111;font-size:5vw;font-weight:500;line-height:1.4;font-family:Jura,sans-serif}h1{font-family:Orbitron,sans-serif;font-size:12vw;color:#111}@supports (-webkit-text-stroke:1px black){h1{-webkit-text-stroke:.3vw #111;-webkit-text-fill-color:#f7f4f2;text-shadow:.4vw .4vw 0 #ff5c00}}a{text-decoration:none}footer,header{max-width:100%;display:flex;justify-content:space-between;flex:0 1 auto}header{padding-bottom:2vw;border-bottom:.4vw solid #111;margin:3vw 0 2vw}.mouth{display:inline-block;width:3vw;text-align:center}footer{padding-top:2vw;border-top:.4vw solid #111;margin-bottom:3vw}li>a{border-top:.4vw solid #111;display:flex;align-items:center;height:13vw}h2{margin-bottom:2.5vw}.project a:hover span,a:hover{color:#ff5c00}.project a:hover span{opacity:1}.project a{display:flex;justify-content:space-between;cursor:pointer}section.content{height:100%;flex:1 1 auto;display:flex;justify-content:stretch;position:relative}.grid{height:100%;width:100%;display:grid;grid-template-columns:1fr;grid-template-rows:auto minmax(min-content,max-content) minmax(min-content,max-content)}.title{margin-bottom:2vw}.introduction{display:flex;flex-direction:column;justify-content:center;margin-bottom:6vw}.introduction a{text-decoration:underline}.hidden{opacity:0}.section-headline{grid-column:1/2}.imprint{white-space:pre-line;overflow-wrap:break-word}.imprint a{text-decoration:underline}@media (min-width:1068px){body{padding:0 3vw;height:100vh}header{padding-bottom:1vw;margin:1.5vw 0 1vw;border-bottom:.15vw solid #111}.mouth{display:inline-block;width:1vw}footer{padding-top:1vw;margin-bottom:1.5vw;border-top:.15vw solid #111}a,h2,h3,li,p,span{font-size:1.6vw}h1{font-size:6vw}@supports (-webkit-text-stroke:1px black){h1{-webkit-text-stroke:.15vw #111;-webkit-text-fill-color:#f7f4f2;text-shadow:.2vw .2vw 0 #ff5c00}}h2{margin-bottom:1vw}.projects{grid-column:1/3;display:grid;grid-template-columns:1fr 1fr;grid-column-gap:3vw}li>a{height:5vw;border-top:.15vw solid #111}section.content{grid-template-columns:1fr 1fr;grid-column-gap:3vw;grid-template-rows:auto minmax(min-content,max-content) minmax(min-content,max-content)}.introduction{max-width:50%}.imprint{max-width:60vw}}
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <a href="/">*<span class="mouth">_</span>*</a>
+      <a href="mailto:jannis@pixel-pink.de">E-Mail</a>
+    </header>
+
+    <section class=imprint>
+      <h1>Impressum</h1>
+<p>Angaben gemäß § 5 TMG:</p>
+<p>Jannis Wicke
+Tempelhofer Damm 206
+12099 Berlin
+E-Mail: <a href="mailto:jannis@pixel-pink.de">jannis@pixel-pink.de</a></p>
+<p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe und für die ich keine Gewähr übernehme.</p>
+<h1>Datenschutz</h1>
+<p>Diese Website nutzt Google Fonts <a href="https://fonts.google.com/">https://fonts.google.com/</a>. Google Fonts werden im Cache deines Browsers gespeichert. Beim Laden der Schriften von Google ist es möglich das der Betrieber Daten erhebt.</p>
+<p>Diese Website nutzt Google Analytics <a href="https://analytics.google.com/">https://analytics.google.com/</a>.</p>
+<p>Du kannst die Erfassung der Webseite bezogenen Daten (inkl. Deiner IP-Adresse) durch Google Analytics mit diesem Browser-Plugin verhindern: <a href="https://tools.google.com/dlpage/gaoptout?hl=de">Browser Add On zur Deaktivierung von Google Analytics</a>.</p>
+<!-- Außerdem kannst Du das Tracking durch Google Analytics auf dieser Seite unterbinden, indem Du diesen Link anklickst: [Google Analytics deaktivieren](<javascript:gaOptout();>). Dabei wird ein Opt-Out-Cookie in Deinem Browser gesetzt und die Erfassung durch Google Analytics für diese Website und für diesen Browser zukünftig verhindert, solange der Cookie vorhanden ist. -->
+<p>Googles Datenschutzrichtlinie: <a href="https://www.google.com/policies/privacy/">https://www.google.com/policies/privacy/</a></p>
+
+    </section>
+
+    <footer>
+      <a href="/impressum/" >Impressum</a>
+      <span>2020</span>
+    </footer>
+    <script>
+      let links = document.querySelectorAll("a");
+      links.forEach(link => link.addEventListener('mouseenter', changeMouth("o")));
+      links.forEach(link => link.addEventListener('mouseout', changeMouth("-")));
+      function changeMouth(symbol) {
+        let mouth = document.querySelector(".mouth");
+        mouth.innerHTML = symbol;
+      }
+    </script>
+  </body>
+
+</html>
