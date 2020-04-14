@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="/assets/style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&text=*-_20ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%20&family=Orbitron:wght@900&text=JWaniscke%20&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&text=§*-_1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZaäbcdefghijklmnoöpqrstuüvwxyz%20&family=Orbitron:wght@900&text=JWaniscke%20&display=swap" rel="stylesheet">
 
     {# <!-- capture the CSS content as a Nunjucks variable -->
     {% set css %} {% include "assets/style.css" %} {% endset %}
@@ -23,26 +23,19 @@
       <a href="mailto:jannis@pixel-pink.de">E-Mail</a>
     </header>
 
-    <section class="content">
+    <section class={{class}}>
+      {# <pre> #}
+
       {{ content | safe }}
+
+      {# </pre> #}
+
     </section>
 
     <footer>
       <a href="/impressum/" >Impressum</a>
       <span>2020</span></footer>
-    {# hoverLink.addEventListener("mouseleave", () => {
-        image.classList.remove("show");
-      }); #}
-    {# var iframes = document.querySelectorAll('iframe');
-      let selected;
-      let iframe; #}
-
-    {# console.log(allElements); #}
-    {# console.log(selectedAttribute);
-        console.log(document.querySelectorAll(selectedAttribute)); #}
-    {# relatives.forEach(item => item.classList.toggle("hidden")) #}
-    {# let relatives = document.querySelectorAll(selectedAttribute); #}
-    <script>
+    {# <script>
       let projects = document.querySelectorAll('.project');
       let allElements = document.querySelectorAll('[data-project]');
       projects.forEach(project => project.addEventListener('click', () => {
@@ -52,7 +45,7 @@
           ? (item.classList.toggle("hidden"))
           : (item.classList.add("hidden")));
       }));
-    </script>
+    </script> #}
   </body>
 
 </html>

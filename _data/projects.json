@@ -1,23 +1,30 @@
 [
     {
-        "title": "musikversicherung.com",
+        "title": "Musikversicherung",
         "url": "https://musikversicherung.com",
         "image": "images/musikversicherung.jpg",
         "alt": "Screenshot von Musikversicherung.com",
         "data": "musikversicherung"
     },
     {
-        "title": "Belmot-Oldtimerversicherung.de",
+        "title": "Oldtimerversicherung",
         "url": "https://belmot-oldtimerversicherung.de/",
         "image": "images/belmot.jpg",
         "alt": "Screenshot von Belmot-Oldtimerversicherung.de",
         "data": "belmot"
     },
     {
-        "title": "mediapioneer.com",
+        "title": "Mediapioneer",
         "url": "https://mediapioneer.com/",
         "image": "images/mediapioneer.jpg",
         "alt": "Screenshot von mediapioneer.com",
         "data": "mediapioneer"
+    },
+    {
+        "title": "Wall Street Weekly",
+        "url": "https://wall-street-weekly.com/",
+        "image": "images/none.jpg",
+        "alt": "none",
+        "data": "none"
     }
 ]
